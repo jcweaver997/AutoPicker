@@ -17,7 +17,6 @@ public class ButtonSelectionListener implements ActionListener {
 
 	
 	public void actionPerformed(ActionEvent arg0) {
-		
 		if(Display.getState()!=Display.CurrentState.SendingFile){
 			
 			Display.setState(Display.CurrentState.SendingFile);
@@ -29,9 +28,9 @@ public class ButtonSelectionListener implements ActionListener {
 					Display.setStatus("Sending "+name);
 					
 					Scp scp = new Scp();
-					scp.setPort(22);
+					scp.setPort(1180);
 					scp.setLocalFile("autoFiles\\"+name);
-					scp.setTodir( "lvuser:@roboRIO-1296-FRC.local:RhsScript.txt");
+					scp.setTodir( "lvuser:@10.12.96.2:RhsScript.txt");
 					scp.setProject( new Project() );
 					scp.setTrust( true );
 					
@@ -39,7 +38,7 @@ public class ButtonSelectionListener implements ActionListener {
 						
 					scp.execute();
 					Display.setStatus("Sent "+name+"!");
-					Thread.sleep(2000);
+					//Thread.sleep(2000);
 					Display.setState(Display.CurrentState.Restart);
 					
 					}catch(Exception e){
@@ -48,7 +47,7 @@ public class ButtonSelectionListener implements ActionListener {
 						
 						try{
 							
-							Thread.sleep(2000);
+							//Thread.sleep(2000);
 							
 						}catch(Exception ef){}
 						
