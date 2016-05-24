@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.io.File;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
@@ -23,7 +24,7 @@ public class Display {
 	public Display(){
 		
 		frame = new JFrame("FRC 1296 Auto Chooser");
-		frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS)); 
+		frame.setLayout(new GridLayout(15,3)); 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);

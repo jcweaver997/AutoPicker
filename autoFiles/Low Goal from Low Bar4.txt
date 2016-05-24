@@ -1,0 +1,29 @@
+# sample commands
+#MODE <block number>
+#DEBUG <debug level>
+#MESSAGE message text to end of line
+#BEGIN
+#END
+#DELAY <seconds>
+#MOVE <left speed> <right speed>
+#MMOVE <speed> <distance:feet>
+#TURN <degrees> <timeout>
+#STRAIGHT <speed> <duration>
+#INTAKE
+#THROWUP
+#SHOOT
+#----------------------------------------------------------------
+BEGIN
+#LOWER
+TAILDOWN
+MMOVE 0.4 220.0
+TAILUP
+TURN -120 1.0
+MMOVE -0.4 115.0
+#THROWUP
+MMOVE 0.4 110.0
+TURN 0 1.0
+TAILDOWN
+MMOVE -0.4 210.0
+END
+
